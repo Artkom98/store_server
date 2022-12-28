@@ -68,7 +68,12 @@
                                 <p class="card-text">{{ product.short_descriptions }}</p>
                             </div>
                             <div class="card-footer text-center">
-                                <button type="button" class="btn btn-outline-success">Отправить в корзину</button>
+                                <a href="{% url 'products:basket_add' product.id %}">
+                                    <button type="button" class="btn btn-outline-success">
+                                        Send to basket
+                                    </button>
+                                </a>
+
                             </div>
                         </div>
                     </div>
